@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://122.222.141.45:3306/zx
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 10
+      max-active: 100
+      max-wait: 60000
+      min-idle: 10
+      test-while-idle: true
+      min-evictable-idle-time-millis: 300000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*   #druid监控页面地址
+        reset-enable: false
+        login-username: druid
+        login-password: druid
